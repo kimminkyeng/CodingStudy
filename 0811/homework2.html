@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>숙제2.html(form태그 연습2)</title>
+</head>
+<body>
+<h2>여름방학 특강 신청</h2>
+<form name="myform" method="전송방식(get/post)" action="서버로전송될주소(파일명)">
+  <p>
+     <fieldset>
+       <legend><b>수강 신청인</b></legend>
+       <label for="hakbun">학번</label> <input type="number" name="hakbun" id="hakbun" /><br/>
+       <label for="name">이름</label> <input type="text" name="name" id="name" /><br/>
+       <label for="hakkwa">학과</label><select name="hakkwa">
+        <optgroup label="공학계열">
+        <option>컴퓨터공학과</option>
+        <option>건축공학과</option>
+        </optgroup>
+        <optgroup label="상경계열">
+        <option>경영학과</option>
+        <option>무역학과</option>
+        <option>경제학과</option>
+        </optgroup>
+        <optgroup label="인문계열">
+        <option>사회학과</option>
+        <option>철학과</option>
+        <option>역사학과</option>
+        </optgroup>
+        <optgroup label="언어계열">
+        <option>국문과</option>
+        <option>일어일문학과</option>
+        <option>영어영문학과</option>
+        <option>독어독문학과</option>
+        </optgroup>
+    </select>
+   </fieldset>
+  </p>
+  <p>
+     <fieldset>
+       <legend><b>수강 과목을 선택하세요</b></legend>
+         선호색상 <input type="color" name="color"/><br/>
+         신청 과목(회화) : <input type="radio" name="english" value="초급" checked/>영어 회화(초급)
+                           <input type="radio" name="english" value="중급"/>영어 회화(중급)
+                           <input type="radio" name="english" value="고급" />영어 회화(고급)<br/>
+
+         신청 과목(자격) : <input type="radio" name="english" value="TOEIC" />TOEIC
+                           <input type="radio" name="english" value="TOEFL"/>TOEFL
+                           <input type="radio" name="english" value="OPIC" />OPIC<br/>
+      
+         관심분야 : <input type="checkbox" name="english" />문법
+                    <input type="checkbox" name="english" />Vocaburary
+                    <input type="checkbox" name="english" />회화
+                    <input type="checkbox" name="english" />리스닝
+                    <input type="checkbox" name="english" />뉴스 청취
+                    <input type="checkbox" name="english" />독해
+     </fieldset>
+  </p>
+  <p>
+     <fieldset>
+      <legend><b>강의 시간을 선택하세요</b></legend>
+       개강 주 <input type="week" name="gaegang"/>
+       강의 시간 <input type="time" name="gaegang"/>
+    </fieldset>
+  </p>
+</body>
+</html>

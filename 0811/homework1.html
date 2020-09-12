@@ -1,0 +1,64 @@
+<html>
+<head>
+  <title>숙제.html(form태그 연습2)</title>
+</head>
+<body>
+<h2>숙제(form 태그 연습)</h2>
+<form name="myform" method="전송방식(get/post)" action="서버로전송될주소(파일명)">
+  <p>
+     <fieldset>
+       <legend>로그인</legend>
+       <label for="mid">아이디</label> <input type="text" name="mid" id="mid" />
+       <label for="pwd">비밀번호</label> <input type="password" name="pwd" id="pwd" />
+       <button type="submit">로그인</button>
+     </fieldset>
+  </p>
+  <p>
+     <fieldset>
+       <legend>가입하기</legend>
+       <label for="mid">아이디 *</label> <input type="text" name="mid" id="mid" /><br/>
+       <label for="pwd">비밀번호 *</label> <input type="password" name="pwd" id="pwd" /><br/>
+       <label for="pwd">비밀번호 확인 *</label> <input type="password" name="pwd" id="pwd" /><br/>
+       <label for="name">이름 *</label> <input type="text" name="mname" id="mname"/><br/>
+       <label for="addr">메일주소 *</label> <input type="email" name="email" id="email"/><br/>
+       <label for="tel">전화번호 *</label> <input type="tel" name="tel" id="tel"/><br/>
+     </fieldset>
+  </p>
+  <p>
+     <fieldset>
+      <button type="submit">가입하기</button>
+      <button type="reset">다시쓰기</button>
+    </fieldset>
+  </p>
+  <p>
+  
+  </p>
+    <p>
+    <b>등록 정보</b></br>
+    
+    <label for="su1">참여인원(최대10명)</label>
+    <input type="number" name="su1" value=0 min=0 max=10 id="su"/>
+  </p>
+  <p>
+    <label for="su2">지원물품(1인당 5개)</label>
+    <input type="number" name="su2" value=1 min=0 max=10 step=5 id="su"/>
+  </p>
+  <p>
+    희망 단계(하,중,상) <input type="range" name="su3" value="1" min=1 max=5 />
+  </p>
+  <p>
+     <fieldset>
+       <legend>수강 과목을 선택하세요(1과목 선택가능)</legend>
+       <p>
+     신청 과목(회화) : <input type="radio" name="english" value="초급"/>영어 회화(초급)
+                       <input type="radio" name="english" value="중급"/>영어 회화(중급)
+                       <input type="radio" name="english" value="고급" checked/>영어 회화(고급)
+       </p>
+       <p>
+     신청 과목(자격) : <input type="radio" name="english" value="TOEIC" checked/>TOEIC
+                       <input type="radio" name="english" value="TOEFL"/>TOEFL
+                       <input type="radio" name="english" value="OPIC" />OPIC
+       </p>
+     </fieldset>
+</body>
+</html>

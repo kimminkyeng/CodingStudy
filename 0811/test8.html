@@ -1,0 +1,66 @@
+<html>
+<head>
+  <title>test8.html(form태그 연습2)</title>
+</head>
+<body>
+<h2>form 태그 연습</h2>
+<form name="myform" method="전송방식(get/post)" action="서버로전송될주소(파일명)" oninput="result.value = parseInt(su11.value) + parseInt(su12.value)">
+  <p>
+    <label for="su1">수량1</label>
+    <input type="number" name="su1" value=0 min=0 max=20 id="su"/>
+  </p>
+  <p>
+    <label for="su2">수량2(묶음)</label>
+    <input type="number" name="su2" value=0 min=0 max=20 step=5 id="su"/>
+  </p>
+  <p>
+    주문수량 <input type="range" name="su3" value="1" min=1 max=5 /> 개
+  </p>
+  <p>
+    색상 <input type="color" name="color"/>
+  </p>
+  <p><a href="http://www.imbc.com">MBC방송국</a></p>
+  <p>
+    <input type="number" name="su11" value=0 />
+    <input type="number" name="su12" value=0 />
+    <output name="result"></output>
+  </p>
+  <p>
+    <label>작업진행상황1</label>
+    <progress></progress>
+  </p>
+  <p>
+    <label>작업진행상황2</label>
+    <progress value=50 max=100></progress>
+  </p>
+  <p>
+    <label>작업진행상황3</label>
+    <meter value=0.3></meter>
+  </p>
+  <p>
+    <label>작업진행상황4</label>
+    <meter value=30 max=50></meter>
+  </p>
+  <p>
+    <label>트래픽초과</label>
+    <meter value=3000 min=100 max=5000 low=500 high=4000></meter>
+  </p>
+  <p>
+    <input type="submit" value="전송1" /> &nbsp;
+    <input type="reset" value="reset" /> &nbsp;
+    <input type="button" value="전송3" /> &nbsp;
+    <input type="image" src="../images/펭수20.jpg" width="50px" />
+    <a href="#"><img src="../images/펭수15.jpg" width="50px" /></a>
+  </p>
+  <p>
+    <button type="submit">전송하기</button>
+    <button type="reset">다시쓰기</button>
+    <button type="button">폼체크</button>
+    <button type="button">
+      <img src="../images/펭수.jpg" width=50px />
+    </button>
+  </p>
+  <input type="hidden" name="idx" value="<%=idx%>" />
+</form>
+</body>
+</html>
