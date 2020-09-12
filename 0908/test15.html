@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>속성연습</title>
+	<script>
+		function output() {
+			var item = "<h2>삽입된 문서입니다.</h2>"
+			/*document.getElementById("demo").innerText = item;*/
+			document.getElementById("demo").innerHTML = item; /*"삽입된 문서입니다." 가 <h2> 태그와 같은 글꼴, 글자굵기, 글자크기로 출력된다.*/
+		}
+		function erase() {
+			document.getElementById("demo").innerText = "";
+		}
+	</script>
+</head>
+<body>
+	<h2>아래 영역에 문자 표시하기</h2>
+	<p id="demo"></p>
+	<button type="button" onclick="output()">출력</button>
+	<button type="button" onclick="erase()">지우기</button>
+</body>
+</html>

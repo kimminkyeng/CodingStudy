@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체속성</title>
+	<script>
+		//int[] su = {100,200,300};
+		//int[] su = new int[3];
+		function item() {
+		var car = ["그랜저",100,"마티즈",200,"에쿠스",300,"제네시스",400]; /*JAVA에서는 {}를 JAVAscript에서는 []로 쓰인다. 그리고 JAVAscript에서는 배열에 상관없이 출력된다. */
+		/*
+		document.write(car[0]+"</br>");
+		document.write(car[1]+"</br>");
+		document.write(car[2]+"</br>");
+		document.write(car[3]+"</br>");
+		*/
+		for(i=0; i<car.length; i++) {
+			document.write(car[i]+"<br/>");
+		}
+	}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="배열출력" onclick="item()"/></p>
+</body>
+</html>

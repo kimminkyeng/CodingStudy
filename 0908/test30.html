@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체(배열)</title>
+	<script>
+		function item() {
+			var price = [500,200,700,350,400];
+			price.sort();
+			var imsi = price.find(myFunc);
+
+			document.getElementById("demo1").innerText = "첫번째 근사값은? " + imsi;
+		}
+		function myFunc(value, index, array) {
+			return value > 300;
+		}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="배열출력" onclick="item()"/></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+</body>
+</html>

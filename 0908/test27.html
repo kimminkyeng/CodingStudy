@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체(배열)</title>
+	<script>
+		function item() {
+			var price = [500,200,700,350,400];
+			document.getElementById("demo1").innerText = price.splice(1);
+			// document.write("<br/>");
+
+			var imsi = price.slice(1);
+			document.getElementById("demo2").innerText = price;
+
+		}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="배열출력" onclick="item()"/></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+</body>
+</html>

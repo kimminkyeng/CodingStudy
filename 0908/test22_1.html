@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체(배열)</title>
+	<script>
+		function item() {
+			var car = new Array("그랜저",100,"마티즈",200,"bbb",250,"에쿠스",300,"제네시스",400,"aaa",150); /*JAVA에서는 {}를 JAVAscript에서는 []로 쓰인다. 그리고 JAVAscript에서는 배열에 상관없이 출력된다. */
+			for(i=0; i<car.length; i++) {
+				document.write(car[i]+"<br/>");
+			}
+			document.write("<br/>");
+
+			car.push("K9"); /*push는 뒤에 추가됨*/
+			car.push(500); /*숫자는 5,000 으로 찍어도 그대로 출력은 되나, 계산이 안된다.*/
+			
+			for(i=0; i<car.length; i++) {
+				document.write(car[i]+"<br/>");
+			}
+			document.write("<br/>");
+
+			car.pop(); /*k9과 500이 빠져나간다. (POP는 뒤쪽 제거)*/
+			car.pop();
+
+			for(i=0; i<car.length; i++) {
+				document.write(car[i]+"<br/>");
+			}
+			document.write("<br/>");
+
+			car.shift(); /*그랜저와 100이 빠져나간다. (shift는 앞쪽 제거)*/
+			car.shift();
+
+			for(i=0; i<car.length; i++) {
+				document.write(car[i]+"<br/>");
+			}
+		}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="배열출력" onclick="item()"/></p>
+</body>
+</html>

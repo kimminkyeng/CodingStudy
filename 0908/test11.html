@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>변수</title>
+	<script>
+		function atom() {
+			var a = document.myform.su1.value;
+			var b= document.myform.su2.value;
+			alert("a="+a);
+			alert("b="+b);
+			alert("a+b=" + (a+b));
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>변수 연습</h2>
+	<p>첫번째 수<input type="text" name="su1"/></p>
+	<p>두번째 수<input type="text" name="su2"/></p>
+	<p><input type="button" value="변수호출" onclick="atom()"/></p>
+</form>
+</body>
+</html>

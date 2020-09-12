@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>객체(배열)</title>
+	<script>
+		function item() {
+			var cars = ["그랜저","마티즈","에쿠스","스포티지","k9"];
+			var price = [500,200,700,350,400];
+			var place = ["서울","울산","인천","청주","제주"];
+			var merge = cars.concat(price, place); /*concat은 옆으로 합쳐서 쭉 나온다.*/
+			document.getElementById("demo").innerText = merge;
+		}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="배열출력" onclick="item()"/></p>
+	<p id="demo"></p>
+</body>
+</html>
