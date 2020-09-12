@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀다운메뉴</title>
+    <style>
+        .menubar {
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            font-size: 14px;
+        }
+        .menubar ul {
+            background:rgb(109,109,109);
+            height:50px;
+            list-style:none;
+            margin:0px;
+            padding:0px;
+        }
+        .menubar ul li {
+            float: left;
+        }
+        .menubar ul li a {
+            display: block;
+            color:#ccc;
+            padding: 0 25px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 50px;
+        }
+        .menubar ul li a:hover {
+            background-color:rgb(11,11,11);
+            color:#fff;
+        }
+        /* 서브메뉴 편집 */
+        .menubar ul li ul {
+            display: none;
+            width:100px;
+            padding: 0px;
+        }
+        .menubar ul li:hover ul {
+            display: block;
+        }
+        .menubar ul li ul li {
+            width: 106px;
+            background-color: rgb(109,109,109);
+        }
+        .menubar ul li ul li a {
+            /* color:olive; */
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<div class="menubar">
+    <ul>
+        <li><a href="menu4.html">Home</a></li>
+        <li>
+            <a href="#">상품소개</a>
+            <ul>
+                <li><a href="#">전자제품</a></li>
+                <li><a href="#">생활용품</a></li>
+                <li><a href="#">핸드폰</a></li>
+                <li><a href="#">주방용품</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">회사소개</a>
+            <ul>
+                <li><a href="#">회사내역</a></li>
+                <li><a href="#">주요상품</a></li>
+                <li><a href="#">회사위치</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">고객전용</a>
+            <ul>
+                <li><a href="">고객쉼터</a></li>
+                <li><a href="">자료실</a></li>
+                <li><a href="">고객소리</a></li>
+            </ul>
+        </li>
+        <li style="float:right">
+            <a href="#">단축메뉴</a>
+            <ul>
+                <li><a href="#">단축1</a></li>
+                <li><a href="#">단축2</a></li>
+                <li><a href="#">단축3</a></li>
+                <li><a href="#">단축4</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

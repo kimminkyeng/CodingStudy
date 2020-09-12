@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=l, initial-scale=1.0">
+	<title>풀다운메뉴</title>
+	<style>
+		.menubar {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 14px;
+		}
+		.menubar ul {
+			height: 50px;
+			background-color: lavender;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menubar ul li {
+			float:left;
+		}
+		.menubar ul li a {
+			display: block;
+			color: purple;
+			padding: 0 25px;
+			text-align: center;
+			text-decoration: none;
+			line-height: 50px;
+		}
+		.menubar ul li a:hover {
+			background-color: rebeccapurple;
+			color : white;
+		}
+		/*서브메뉴 편집*/
+		.menubar ul li ul {
+			display: none;
+			width: 130px;
+		}
+		.menubar ul li:hover ul {
+			display:block;
+		}
+		.menubar ul li ul li {
+			width : 130px;
+			background-color: rebeccapurple;
+		}
+		.menubar ul li ul li a {
+			color : fuchsia;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+<div class="menubar">
+	<ul>
+		<li><a href="menu4.html">Home</a></li>
+		<li>
+			<a href="#">상품소개</a>
+			<ul>
+				<li><a href="#">전자제품</a></li>
+				<li><a href="#">생활용품</a></li>
+				<li><a href="#">가구</a></li>
+				<li><a href="#">문구</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">회사소개</a>
+			<ul>
+				<li><a href="#">인사말</a></li>
+				<li><a href="#">인재상</a></li>
+				<li><a href="#">사업자위치</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">고객전용</a>
+			<ul>
+				<li><a href="#">고객쉼터</a></li>
+				<li><a href="#">마이페이지</a></li>
+				<li><a href="#">1:1 상담</a></li>
+			</ul>
+		</li>
+		<li style="float:right">
+			<a href="#">단축메뉴</a>
+			<ul>
+				<li><a href="#">단축1</a></li>
+				<li><a href="#">단축2</a></li>
+				<li><a href="#">단축3</a></li>
+				<li><a href="#">단축4</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

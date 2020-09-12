@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메뉴연습</title>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden; /*메뉴판 글씨들이 겹치지 않게*/
+		}
+		ul li {
+			/*display: inline; <-이것은 'float: left;' 를 적용하지 못하게 한다.*/
+			float: left;
+			text-align: center;
+			background-color: lawngreen;
+		}
+		ul li:hover {
+			background-color: plum;
+		}
+		ul li a {
+			display: block;
+			width : 100px;
+			height : 30px;
+			padding : 8px;
+			text-decoration: none;
+		}
+		/* ul li a:hover {
+			/* background-color: plum;
+		}*/
+		ul li:first-child {
+			border-radius: 10px 0 0 10px;
+		}
+		ul li:last-child {
+			border-radius: 0 10px 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="test1.html">애완견 종류</a></li>
+		<li><a href="test1.html">입양하기</a></li>
+		<li><a href="test1.html">건강 돌보기</a></li>
+		<li><a href="test1.html">더불어 살기</a></li>
+	</ul>
+</body>
+</html>
