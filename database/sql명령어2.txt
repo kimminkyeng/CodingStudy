@@ -1,0 +1,65 @@
+﻿show databases;
+
+use mysql;
+
+show tables;
+
+select * from user;
+
+select host, user from user;
+
+create database atom;
+
+quit;  (exit)   종료
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin>mysql -u root -p
+
+drop database atom;
+
+create user tom;
+
+drop user tom;
+
+create user 'atom'@'%' identified by '1234';
+
+create database mbc;
+
+grant all privileges on mbc.* to 'atom'@'localhost' identified by '1234';
+
+flush privileges;
+
+show grants;
+
+show grants for 'atom'@'localhost';
+
+revoke all on mbc.* from 'atom'@'localhost';
+
+drop user atom;
+
+drop database mbc;
+
+select host, user from user;
+
+drop user atom@'localhost';
+
+/* root로 로그인 후 작업*/
+select host, user from user;
+
+mysql> create table seoul (
+    -> name  varchar(20) not null, : 이름은 가변문자 20바이트, 널값을 허용하지 않음.
+    -> age   int default 20,
+    -> address varchar(10),
+    -> gender  char(2) default '남자', :성별은 고정문자 2바이트, 디폴트처리
+    -> birthday datetime default now()
+    -> );
+
+show tables;
+
+select * from seoul;
+
+desc seoul;
+
+drop table seoul;
+
+show tables;
+

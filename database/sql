@@ -1,0 +1,241 @@
+test1select * from test1;
+
+-- 갯수를 구하는 함수. count()
+select count(*) from test1;
+
+-- 합계를 구하는 함수. sum()
+-- 전체 레코드의 포인트 합계를 구하시오.
+select sum(point) as 전체포인트합계 from test1;
+
+-- 성별이 여자인 자료의 포인터 합계를 구하시오.
+select sum(point) as 성별이여자인자료의포인트합계 from test1 where gender='여자';
+
+-- 각 성별에 따른 포인트 합계를 구하시오.
+select gender, sum(point) as 성별에따른포인트합계 from test1 group by gender;
+
+-- 평균을 구하는 함수. avg()
+-- 여자의 포인트 평균은?
+select gender, avg(point) as 여자포인트평균 from test1 where gender='여자';
+
+-- 각 성별에 따른 포인트 평균을 구하시오.
+select gender, avg(point) as 성별에따른포인트평균 from test1 group by gender;
+
+-- 최대값을 구하시오. max()
+-- 각 성별에 따른 포인트 최대값을 구하시오.
+select gender, max(point) as 성별에따른포인트최대값 from test1 group by gender;
+
+-- 최소값을 구하시오. min()
+-- 각 성별에 따른 포인트 최소값을 구하시오.
+select gender, min(point) as 성별에따른포인트최소값 from test1 group by gender;
+
+-- 각 성별의 최고령자를 구하시오.
+select max(age) from test1;
+
+-- 각 성별의 최연소자를 구하시오.
+select min(age) from test1;
+select name, age from test1 order by age limit 0,1;
+
+-- 남자의 최연소자와 이름을 구하시오.
+select name, min(age) from test1 where gender='남자';
+
+/* 수치함수 */
+-- 반올림함수 round() , round(소수이하자리수)
+select round(123.456);
+select round(56.789);
+select round(123.456, 1); -- 소수이하 2번째자리에서 반올림하여 첫째자리까지 구한다.
+select round(123.456, -1); -- 정수부 첫째자리에서 반올림한다.
+
+-- 절삭함수 truncate()
+select truncate(123.456,0);
+select truncate(456.789,0);
+select truncate(123.456,1);
+select truncate(123.456,-1);
+
+-- 무조건 올림함수 ceil(), 무조건 내림함수 floor()
+select ceil(123.456); /*결과 : 124*/
+select ceil(456.789); /*결과 : 457*/
+select ceil(-123.456); /*결과 : -123*/
+select ceil(-456.789); /*결과 : -456*/
+
+
+select floor(123.456); /*결과 : 123*/
+select floor(456.789); /*결과 : 456*/
+select floor(-123.456); /*결과 : -124*/
+select floor(-456.789); /*결과 : -457*/
+
+-- 나이의 평균을 구하되 소수이하 올리시오.
+select ceil(avg(age)) from test1;
+
+-- 나이의 평균을 구하되 소수이하는 버리시오.
+select floor(avg(age)) from test1;
+
+
+-- 절대값(양수값으로 표현) 함수 abs()
+select abs(1234);
+select abs(-1234); /*결과 1234*/
+select (123-456);
+select abs(123-456); /*abs는 두개의 '차'. 결과값이 abs(-333) -> -(-333). 즉 결과는 333.*/
+
+select name, abs(age-1) from test1;
+
+-- 나머지 함수 : mod(정수1, 정수2)
+select mod(10,3); /* 결과는 1.*/
+-- 10 나누기 3 의 몫은?
+select floor(10/3); /*몫은 : 3.33333... 나오니까 floor 처리하면 '3' 만 나옴.*/
+select floor(10/3), mod(10,3);
+
+/* 문자 함수*/
+-- 영문 대문자로 표시해주세요. upper함수 사용.(<-> lower)
+select upper('apple');
+select upper('welcome to korea');
+
+-- 영문 소문자로 표시해주세요.
+select lower('COMPUTER');
+select lower('WELCOME TO CHONGJU');
+
+-- 문자열의 길이를 구하시오. length()
+select length('seoul');
+select idx, name, length(name) from test1; /*한글 한문자에 3바이트로 인식한다.*/
+select length('seo울'); /*결과 : (영문은 한문자에 1바이트) 6. */
+
+-- 문자의 결합함수 concat(문자열1, 문자열2, 문자열3,....)
+select concat('a','b','c');
+select concat('성명 : ', name) from test1;
+
+-- 지정된 문자열 반환함수 substr(char, pos, len)
+-- char문자중 position 번째 문자부터 length 길이만큼 잘라서 반환한다.
+select substr('welcome to korea', 3,7); -- 문자길이는 공백도 포함한다. /*결과 : lcome t*/
+select substr('951020-1234567', 8, 1); /*결과 : 1.*/
+select substr(birth, 1, 4) from test1;
+select name,substr(birth, 1, 6) from test1;
+select name, birth from test1;
+select name, substr(birth, 6, 2) from test1; -- '월'을 출력
+select name, substr(birth, 9, 2) from test1; -- '일'을 출력
+select name, substr(birth, 15, 2) from test1; -- '분'을 출력
+select name, substr(birth, 18, 2) from test1; -- '초'를 출력
+select name, substr(birth, 12) from test1; -- 성명과 출생시간을 출력하시오.
+
+-- 포함시켜주는 함수. instr(str, chr) : 문자열(str)중에서 특정문자를 찾아 위치반환.
+-- 아래 문자열중에서 o자의 위치는?
+select instr('welcome to', 'o');
+
+-- 'welcome to korea'의 입력내용중 첫번째 문장(단어)만을 출력하시오.
+/*select substr('welcome to korea',1,7);*/
+select substr('welcome to korea',1, instr('welcome to korea',' ')-1);
+
+select left('welcome to korea', 5); -- 왼쪽부터 5개의 문자를 추출
+select right('welcome to korea', 5); -- 오른쪽부터 5개의 문자를 추출
+select mid('welcome to korea', 5);
+
+-- substring() - substr()과 같은 의미
+select substring('welcome to korea', 1,5); -- 첫번째부터 5번째 문자 추출
+select substring('welcome to korea', -5); -- 뒤에서부터 5번째 문자 추출
+select substring('welcome to korea', -5, 3); -- 뒤쪽 5번째부터 3개 추출
+
+-- 왼쪽 공백문자 무시 함수. ltrim()
+select ltrim('        welcom to');
+
+-- 오른쪽 공백문자 무시 함수. rtrim()
+select rtrim('welcom to                   ');
+select concat('  welcome    ','     to     ','    korea    ');
+select concat(rtrim('  welcome    '),'     to     ',ltrim('    korea    '));
+
+-- 양쪽 공백문자 무시 함수. trim()
+select concat(trim('  welcome    '),'     to     ',trim('    korea    '));
+select concat(trim('  welcome    '),trim('     to     '),trim('    korea    '));
+
+-- test1테이블의 name필드중 '성'과 '이름'을 분리시켜 출력하시오.('성'은 첫번째 글자로 처리)
+select name from test1;
+select name, substr(name, 1,1), substr(name,2) from test1;
+select concat("성 : ",substr(name,1,1), " 이름 : ", substr(name,2)) from test1;
+
+-- 중간위치의 값을 출력하는 함수. mid()
+-- mid(문자열, 시작위치, 추출크기)
+-- 이름중에서 2번째 글자를 출력하세요.
+select name, mid(name, 2, 1) from test1;
+
+-- 문자열의 치환 : replace(str, char1, char2) : 문자열(str)중에서 특정문자(char1)를 지정문자 (char2)로 치환한다.
+-- 문자열의 공백 발생시에 '_' 글자로 대신한다.
+select replace('welcome to korea',' ','_');
+
+-- 날짜함수(날짜 : now(), year())
+select now();
+select year(now());
+select month(now());
+select day(now());
+
+select year(now()), month(now()), day(now());
+select concat(year(now()),'년', month(now()),'월', day(now()),'일');
+
+-- 시(hour())/ 분(minute())/초(second())
+select hour(now());
+select minute(now());
+select second(now());
+
+select hour(now()), minute(now()), second(now());
+select concat(hour(now()),'시', minute(now()),'분', second(now()),'초');
+
+-- 생일을 출력하시오.
+select concat(name,"생일은 ?", year(birth),'년', month(birth),'월', day(birth),'일') from test1;
+
+-- 주일(dayname())/ (week())
+select dayname(now()); -- 현재 요일을 영어로 출력한다.
+select week(now()); -- 현재가 올해 몇번째 주인가?
+select monthname(now()); -- 월을 문자열로 반환하는 함수 : (monthname())
+
+-- 날짜 형식을 지정한 출력 : date_format(날짜, format)
+-- 형식은 무조건 %기호. (형식기호 : (y : 년도2자리, y : 년도 4자리), (m : 월을 숫자로, m : 월을 문자로), (d : 날짜형식), (a : 짧은 영문이름), (i : 분), (s : 초))
+select date_format(now(), '%Y-%m-%d'); -- 기본형식 (yyyy-mm-dd)
+select date_format(now(), '%y-%M-%d');
+select date_format(now(), '%y-%m-%d');
+select date_format(now(), '%y-%m-%D');
+select date_format(now(), '%Y-%M-%d');
+select date_format(now(), '%Y-%M-%D');
+select date_format(now(), '%y-%m-%d %w');
+select date_format(now(), '%y-%m-%d %W');
+select date_format(birth, '%y-%m-%d %W') from test1 where name='홍길동';
+select date_format(now(), '%y-%m-%d %W %a');
+select date_format(now(), '%H:%i:%s'); -- 24시간제
+select date_format(now(), '%l:%i:%s'); -- 12시간제 H:MM:SS
+select date_format(now(), '%r'); -- 12시간제 다른것. HH:MM:SS
+select date_format(now(), '%Y-%c-%e'); -- yyyy-m-d
+select date_format(birth, '%Y-%c-%e') from test1;
+
+-- 현재 날짜 함수 now() / sysdate()/ current_timestamp yyyy-mm-dd hh:mm:ss
+select now();
+select sysdate();
+select current_timestamp();
+
+-- 날짜 연산 함수(date_add(기준날짜, 계산수치값)) - interval명령어와 함께 사용.
+-- interval뒤의 옵션은 year, month, day, hour, minute, second
+select now();
+select date_add(now(), interval 1 day); -- interval 1은 내일.
+select date_add(now(), interval -1 day); -- interval -1은 어제.
+select date_add(now(), interval -1 hour); -- 여기서 interval -1은 한시간전.
+select date_add(now(), interval 24 hour); -- 여기서 interval 24는 내일 이시간.
+select date_add(now(), interval -10 second); -- 여기서 interval -10는 10초전.
+
+-- 달의 마지막 일자는? (last_day())
+select last_day(now());
+select last_day('2020-2-1'); -- 윤년
+select last_day(birth) from test1 where name='홍길동'; -- 홍길동이 태어난 월의 마지막날은 몇일인가?
+
+select now()+1;
+-- 날짜 차이 계산하기(to_days())
+select to_days(now()) - to_days('2020-8-1');
+select to_days(now()) - to_days('2020-7-3');
+select to_days(now()) - to_days(date_add(now(), interval -5 day));
+
+-- 날짜 차이 계산(날짜비교) : datediff()
+select datediff(now(), '2020-8-1'); -- 오늘에서 해당날짜가 몇일 차이나는지?
+select datediff(now(),date_add(now(), interval -5 day));
+
+-- 날짜 차이 계산(단위를 부여) : timestampdiff()
+-- year/month/day/week/hour/minute/second/quarter(분기)
+select timestampdiff(month, '2020-1-1', now()); -- 올해 이번달에서 1월이니, 7이 결과값.
+select timestampdiff(quarter, '2020-1-1', now()); -- 올해 이번달에서 이번년도 분기
+
+-- 천단위마다 쉼표 표시 : format(필드명, 소수이하 자리수)
+select format(1234567, 0);
+select format(1234567.1234, 2);
+
