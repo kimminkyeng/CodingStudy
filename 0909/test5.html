@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+  <script>
+    function myFunc() {
+      var cars = ["그랜져","소나타","에쿠우스","제니시스","K9"];
+      var text="";
+      var i=0;
+      var len=cars.length;
+      for(; i<len;) {
+        text += cars[i] + "<br/>";
+        i++;
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+</head>
+<body>
+  <h2>반복문(for)</h2>
+  <p>배열값 출력하기</p>
+  <p><button type="button" onclick="myFunc()">출력</button></p>
+  <p id="demo"></p>
+</body>
+</html>

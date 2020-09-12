@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수학메소드(Math)</title>
+  <script>
+    function myFunc() {
+      // 반올림 : round()
+      document.write(Math.round(4.5) + "<br/>");
+      document.write(Math.round(-4.5) + "<br/>");
+      document.write(Math.round(4.4) + "<br/><br/>");
+
+      // 지수승(거듭제곱) : pow()
+      document.write(Math.pow(2,5) + "<br/>");
+      document.write(Math.pow(2,-5) + "<br/><br/>");
+
+      // 제곱근 : sqrt()
+      document.write(Math.sqrt(16) + "<br/>");
+      document.write(Math.sqrt(125) + "<br/><br/>");
+
+      // 절대값 : abs()
+      document.write(Math.abs(16) + "<br/>");
+      document.write(Math.abs(-16) + "<br/><br/>");
+
+      // 올림 : ceil()
+      document.write(Math.ceil(4.4) + "<br/>");
+      document.write(Math.ceil(-4.4) + "<br/><br/>");
+
+      // 버림 : floor()
+      document.write(Math.floor(4.8) + "<br/>");
+      document.write(Math.floor(-4.8) + "<br/><br/>");
+
+      // PI , cos()
+      document.write(Math.cos(0 * Math.PI / 180) + "<br/><br/>");
+
+      // 최대/최소 (max() / min())
+      document.write(Math.max(0,10,5,20,15,9,18) + "<br/>");
+      document.write(Math.min(0,10,5,20,15,9,18) + "<br/><br/>");
+
+      // 절삭 : trunc()
+      document.write(Math.trunc(123.456) + "<br/>");
+      document.write(Math.trunc(-123.456) + "<br/><br/>");
+
+      // 난수 : random() : 0<= x <1
+      var res = parseInt(Math.random()*10) + 1;
+      document.write(res + "<br/><br/>");
+    }
+  </script>
+</head>
+<body>
+  <h2>수학메소드연습</h2>
+  <p><button type="button" onclick="myFunc()">출력</button></p>
+  <p id="demo"></p>
+</body>
+</html>

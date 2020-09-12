@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>폼체크(숫자)</title>
+	<script>
+		function myFunc() {
+			var res = document.getElementById("su");
+			var text = "";
+			if(!res.checkValidity()) {
+				// text = "1에서 10까지의 숫자를 입력하세요!";
+				text = res.validationMessage;
+			}
+			else {
+				text = "정확한 숫자를 입력하셨습니다.";
+			}
+			document.getElementById("demo").innerHTML = text;
+		}
+		function myReset() {
+			document.getElementById("demo").innerHTML = ""; /*""에 " " 처럼 입력하면 안됨(스페이스바 치지말것).*/
+		}
+	</script>
+</head>
+<body>
+<h2>숫자와 수의 범위 체크</h2>
+<p>1~10까지의 정수만 입력하세요</p>
+<form name="myform">
+	<p><input type="number" name="su" id="su" min="1" max="10" required/></p>
+	<p>
+		<button type="button" onclick="myFunc()">체크</button>
+		<button type="reset" onclick="myReset()">취소</button>
+	</p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날짜객체</title>
+  <script>
+    function myFunc() {
+      var d1 = new Date();
+      document.getElementById("demo1").innerHTML = d1;
+
+      var d2 = new Date(2020, 9-1, 10);  // 0월부터 계산...
+      document.getElementById("demo2").innerHTML = d2;
+
+      // 날짜형식을 문자로 변경
+      document.getElementById("demo3").innerHTML = d1.toString();
+
+      // 날짜형식을 쉬운형식으로 반환
+      document.getElementById("demo4").innerHTML = d1.toDateString();
+
+      // 연도만 가져오기
+      document.getElementById("demo5").innerHTML = d1.getFullYear() + "년";
+
+      // 월만 가져오기
+      document.getElementById("demo6").innerHTML = (d1.getMonth()+1) + "월";
+
+      // 일만 가져오기
+      document.getElementById("demo7").innerHTML = d1.getDate() + "일";
+
+      // 시간만 가져오기
+      document.getElementById("demo8").innerHTML = d1.getHours() + "시";
+
+      // 분만 가져오기
+      document.getElementById("demo9").innerHTML = d1.getMinutes() + "분";
+
+      // 초만 가져오기
+      document.getElementById("demo10").innerHTML = d1.getSeconds() + "초";
+
+      // 1/1000초 가져오기
+      document.getElementById("demo11").innerHTML = d1.getMilliseconds() + "초";
+
+      // 요일반환(0(일)~6(토))
+      document.getElementById("demo12").innerHTML = d1.getDay() + "요일";
+
+      // 요일을 문자로 변환해서 출력
+      var days = ["일","월","화","수","목","금","토"];
+      document.getElementById("demo13").innerHTML = days[d1.getDay()] + "요일";
+
+      // 날짜 셋팅하기
+      d1.setFullYear(2020,9-1,10);
+      document.getElementById("demo14").innerHTML = d1;
+    }
+  </script>
+</head>
+<body>
+  <h2>날짜 연습</h2>
+  <p><button type="button" onclick="myFunc()">출력</button></p>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <p id="demo12"></p>
+  <p id="demo13"></p>
+  <p id="demo14"></p>
+</body>
+</html>

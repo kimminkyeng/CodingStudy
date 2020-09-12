@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조건문</title>
+	<script>
+		function myFunc() {
+		var age, str;
+		age = Number(document.getElementById("age").value);
+		if(isNaN(age)) {
+			alert("나이는 숫자로 입력하셔야 합니다.")
+			str="나이는 숫자로 입력하셔야 합니다.";
+		}else {
+			str = (age >= 20) ? "성년!" : "미성년!!";
+		// 	if(age >= 20){
+		// 	str= "당신은 성년입니다.";
+		// }   else {
+		// 	str = "당신은 미성년자 입니다.";
+		// 	}
+		}
+	 document.getElementById("demo").innerHTML = "<b>" +str+ "</b>"
+	}
+	</script>
+</head>
+<body>
+	<h2>조건문(if/삼항연산자)</h2>
+	<p>나이를 숫자로 입력한 후 확인버튼을 누르세요.</p>
+	<p><input type="text" name="age" id="age" value="20"/></p>
+	<p><button type="button" onclick="myFunc()">확인</button></p>
+	<p id="demo"></p>
+</body>
+</html>

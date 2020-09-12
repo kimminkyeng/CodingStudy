@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+  <script>
+    function myFunc() {
+      var cars = {fname:"홍",
+                  lname:"길동",
+                  age:25};
+      var res, text="";
+      for(res in cars) {  // in 연산자는 인텍스에 따른 값을 반환
+        //text += cars[res] + "<br/>";   // 키에 해당하는 '값'을 가져온다.
+        text += res + "<br/>";  // 키값(필드)를 가져온다.
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+  </script>
+</head>
+<body>
+  <h2>반복문(for)</h2>
+  <p>배열값 출력하기</p>
+  <p><button type="button" onclick="myFunc()">출력</button></p>
+  <p id="demo"></p>
+</body>
+</html>

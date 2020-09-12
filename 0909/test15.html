@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function myFuncCreate(fname, lname, age, eye) {
+			this.fname = fname;
+			this.lname = lname;
+			this.age = age;
+			this.eye = eye;
+		}
+		function myFunc() {
+        var myFather= new myFuncCreate("홍","장군",65,"black");
+		var myMother= new myFuncCreate("김","말숙",62,"blue");
+		alert("2개의 객체생성 완료!");
+		var str1 = "아버지 : " +myFather.fname+ " , " + myFather.lname+" ,"+myFather.age+ " , "+myFather.eye;
+		document.getElementById("demo").innerHTML = str1;
+		var str2 = "어머니 : " +myMother.fname+ " , " + myMother.lname+" ,"+myMother.age+ " , "+myMother.eye;
+		document.getElementById("demo2").innerHTML = str2;
+		}
+	</script>
+</head>
+<body>
+	<h2>객체 연습</h2>
+	<p><button type="button" onclick="myFunc()">출력</button></p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+</body>
+</html>

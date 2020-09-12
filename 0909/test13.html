@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function myFunc() {
+			var person = {
+				fname : "홍",
+				lname : "길동",
+				age : 25,
+				eyeColor : "brown"
+			};
+			var str = person.fname + " " + person.lname + " , 나이:" + person.age + " , 눈색:" + person.eyeColor;
+			document.getElementById("demo").innerHTML = str;
+		
+		    var personString = JSON.stringify(person); //문자형식으로 출력
+			document.getElementById("demo2").innerHTML = personString;
+		}
+	</script>
+</head>
+<body>
+	<h2>객체 연습</h2>
+	<p><button type="button" onclick="myFunc()">출력</button></p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	
+</body>
+</html>
