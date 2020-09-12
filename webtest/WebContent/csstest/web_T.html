@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dukyo Mountian</title>
+  <style>
+    /* 공통 적용 사항 */
+    body {
+      font:14px "맑은고딕";
+      background:linear-gradient(to bottom, skyblue, white 50%);
+      background-attachment:fixed;
+    }
+    #container {
+      margin:0 auto;
+      background-color:#ffffff;
+      border:1px solid #e7e7e7;
+    }
+    .header1 a {
+      text-decoration:none;
+      color:#ffff00;
+    }
+    #content {
+      background-color:#ffffff;
+      padding-top:5px;
+      padding-left:10px;
+    }
+    #sidebar img:hover {
+      border:1px solid #000000;
+      opacity:0.8;
+    }
+    #footer {
+      padding:10px 0;
+      background-color:#061f1f;
+      color:#ffffff;
+      text-align:center;
+      clear:both;
+    }
+    header, section, article, figure, aside, footer {
+      display:block;
+    }
+    
+    /* 핸드폰화면 설정(최대 599px이하) */
+    @media screen and (max-width:599px) {
+      #container {
+        width:320px;
+      }
+      #mainHeader {
+        height:90px;
+        margin-top:0px;
+        background-color:#061f1f;
+      }
+      #mainHeader h1 {
+        position:absolute;
+        margin-top:25px;
+        margin-left:10px;
+      }
+      .header1 a {
+        font-size:0.8em;
+        color:#ffff00;
+        text-shadow:0px 1px 1px #000;
+      }
+    /*
+      #mainNav {
+        width:580px;
+        height:60px;
+        background-color:#006600;
+        margin-top:-15px;
+      }
+    */
+      #mainNav ul {
+        list-style:none;
+    /*
+        height:40px;
+        padding:10px 0 5px 0px;
+    */
+      }
+      #mainNav ul li {
+    /*    float:left;  */
+        width:280px;
+        margin:0 0 10px -18px;
+      }
+      #mainNav a {
+        display:block;
+    /*    width:150px; */
+        color:brown;
+        padding:10px 5px 5px 0px;
+        text-decoration:none;
+        border:1px solid #cccccc;
+        border-radius:10px;
+        text-align:center;
+      }
+      #mainNav ul li a:hover {
+        color:#0000ff;
+      }
+      #content {
+        width:310px;
+        padding:5px
+    /*    float:left; */
+      }
+      #sidebar {
+        width:320px;
+        clear:both;
+    /*    margin-left:15px; */
+        text-align:center;
+      }
+      #sidebar img {
+        margin:0 0 3px 0px;
+        border:1px solid #cccccc;
+        width:98%;
+      }
+    }
+    
+    /* 태블릿화면 설정(최소 600px~1023px) */
+    @media screen and (min-width:600px) and (max-width:1023px) {
+      #container {
+        width:580px;
+      }
+      #mainHeader {
+        height:170px;
+        margin-top:0px;
+        background-image:url(../images/12.jpg);
+        background-repeat:no-repeat;
+        background-position:left top;
+      }
+      #mainHeader h1 {
+        position:absolute;
+        margin-top:25px;
+        margin-left:10px;
+      }
+      .header1 a {
+        font-size:1.5em;
+        color:#ffff00;
+        text-shadow:0px 1px 1px #000;
+      }
+      #mainNav {
+        width:580px;
+        height:60px;
+        background-color:#006600;
+        margin-top:-15px;
+      }
+      #mainNav ul {
+        list-style:none;
+        height:40px;
+        padding:10px 0 5px 0px;
+      }
+      #mainNav ul li {
+        width:130px;
+        float:left;
+      }
+      #mainNav a {
+        display:block;
+        width:150px;
+        color:#ffffff;
+        padding:10px 5px 5px 35px;
+        text-decoration:none;
+      }
+      #mainNav ul li a:hover {
+        color:#0000ff;
+      }
+      #content {
+        width:550px;
+        float:left;
+      }
+      #sidebar {
+        width:550px;
+        clear:both;
+        margin-left:15px;
+      }
+      #sidebar img {
+        margin:0 0 10px 0px;
+        border:1px solid #cccccc;
+        text-align:center;
+        width:32%;
+      }
+    }
+    
+    /* PC화면 설정(최소 1024px이상) */
+    @media screen and (min-width:1024px) {
+      #container {
+        width:960px;
+      }
+      #mainHeader {
+        height:280px;
+        margin-top:0px;
+        background-image:url(../images/12.jpg);
+        background-repeat:no-repeat;
+        background-position:left top;
+      }
+      #mainHeader h1 {
+        position:absolute;
+        margin-top:35px;
+        margin-left:20px;
+      }
+      .header1 a {
+        font-size:2em;
+        color:#ffff00;
+        text-shadow:0px 1px 1px #000;
+      }
+      #mainNav {
+        width:960px;
+        height:60px;
+        background-color:#006600;
+        margin-top:-15px;
+      }
+      #mainNav ul {
+        list-style:none;
+        height:40px;
+        padding:10px 0 5px 0px;
+      }
+      #mainNav ul li {
+        float:left;
+      }
+      #mainNav a {
+        display:block;
+        width:150px;
+        color:#ffffff;
+        padding:10px 5px 5px 35px;
+        text-decoration:none;
+      }
+      #mainNav ul li a:hover {
+        color:#0000ff;
+      }
+      #content {
+        width:720px;
+        float:left;
+      }
+      #sidebar {
+        width:200px;
+        float:right;
+        padding:20px 10px;
+      }
+      #sidebar img {
+        margin-bottom:12px;
+        border:1px solid #cccccc;
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <header id="mainHeader">
+	  <h1 class="header1"><a href="web.html">DukYu Mountain</a></h1>
+  </header>  
+  <nav id="mainNav">
+    <ul>
+      <li><a href="aa.html">덕유산소개</a></li>
+      <li><a href="bb.html">덕유산의사계</a></li>
+      <li><a href="cc.html">덕유리조트</a></li>
+      <li><a href="dd.html">주변명소</a></li>
+    </ul>
+  </nav>  
+  <section id="content">
+    <h2>덕유산 소식</h2>
+    <article>
+      <h3>¤ 공 지 사 항</h3>
+      <p>탐방객 안전관리를 위해 부분 통제되었던 송계사~백암봉, 신풍령~백암봉 탐방로를 아래와 같이 개방하오니 산행에 참고하시기 바랍니다.</p>
+      <div>
+        - 해당구간: 송계사~백암봉, 신풍령~백암봉 구간(덕유산 15개 탐방로 중 14개 구간 개방)<br />
+        - 개방일시: 2020. 01. 15.(월)<br />
+        - 통제구간: 인월담~칠봉 구간(2017. 12. 16. ~ 2021. 4. 30. / 탐방객 안전사고 예방 및 공원자원 보호)<br />
+        - 탐방문의: 덕유산사무소 063-322-3174, 구천동탐방지원센터 063-322-3473
+      </div>
+    </article>
+    <article>
+      <h3>¤ 대피소 이용안내</h3>
+      <p>대피소 이용등록</p>
+      <div>
+        - 대피소 예약 후 당일 현장에서 이용등록을 해야만 대피소를 이용할 수 있습니다.<br />
+        - 이용등록 시에는 예약자와 동행자의 신분증을 꼭 지참해야 합니다.<br />
+        - 하절기(4월~10월)에는 18시부터 입실가능, 19시에는 미등록시 자동 취소되며, 동절기(11월~3월)에는 17시부터 입실가능, 18시까지 미등록시 자동취소됩니다.<br />
+        - 대피소 등록 마감 시간과 탐방로별 통제 시간을 고려하여 알맞은 산행계획을 세우시기 바랍니다.<br /><br />
+      </div>
+    </article>
+  </section>
+  <aside id="sidebar">
+    <img src="../images/1.jpg" alt="">
+    <img src="../images/2.jpg" alt="">
+    <img src="../images/3.jpg" alt="">
+  </aside>    
+  <footer id="footer">
+    <p>000 SuSan-ri, Seongsan-eup, Namjeju-gun, Jeju Special Self-Governing Province</p>
+    <address>Copyright ⓒ. All rights reserved.</address>
+  </footer>
+</div>
+</body>
+</html>
