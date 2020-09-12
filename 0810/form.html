@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>form.html</title>
+</head>
+<body>
+<h2>form 태그 연습</h2>
+<h2>회원가입폼</h2>
+<form name="myform" method="get/post" action="주소">
+  <p>아이디 : <input type="text" name="mid"/></p>
+  <p>비밀번호 : <input type="password" name="pwd"/></p>
+  <p>이름 : <input type="text" name="mname" size="10"/></p>
+  <p>나이 : <input type="text" name="age" size="2" maxlength="3" value="20"/></p>
+  <p>
+     성별 : <input type="radio" name="gender" value="남"/>남자
+            <input type="radio" name="gender" value="여" checked/>여자
+  </p>
+  <p>
+    취미 : <input type="checkbox" name="hobby" checked/>등산
+           <input type="checkbox" name="hobby" />낚시
+           <input type="checkbox" name="hobby" />독서
+           <input type="checkbox" name="hobby" />영화감상
+           <input type="checkbox" name="hobby" />자전거타기
+  </p>
+  <p>
+    지역 : <select name="addr"> -- 콤보박스 --
+             <option value="서울">서울</option>
+             <option value="부산">부산</option>
+             <option value="청주">청주</option>
+             <option value="인천">인천</option>
+             <option value="대구">대구</option>
+             <option value="제주">제주</option>
+             <option value="광주">광주</option>
+          </select>
+  </p>
+  <p>
+    다녀본 산 : <select name="mnt" size=5 multiple> -- 리스트박스 --
+                <option value="북한산">북한산</option>
+                <option value="한라산">한라산</option>
+                <option value="상당산">상당산</option>
+                <option value="우암산">우암산</option>
+                <option value="태백산">태백산</option>
+                <option value="소백산">소백산</option>
+                <option value="천태산">천태산</option>
+  </p>
+  <p>첨부파일 : <input type="file" name="fname"/></p>
+  <p>
+    자기소개 : <textarea rows=5 cols=50 name="content"></textarea>
+  </p>
+  <p>
+    <input type="submit" value="전송"/>
+    <input type="reset" value="취소"/>
+  </p>
+</form>
+</body>
+</html>

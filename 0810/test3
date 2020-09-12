@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title>html태그연습</title>
+</head>
+<body>
+<h2>MARQUEE태그</h2>
+<p><marquee>홍길동</marquee></p>
+<p><marquee width="500px" bgcolor"#ccc">홍길동</marquee></p>
+<p><marquee direction="right">홍길동</marquee></p>
+<p><marquee direction="down" height="100px" bgcolor="#aaa">홍길동</marquee></p>
+<p><marquee direction="up" height="100px" bgcolor="#a12">홍길동</marquee></p>
+</body>
+</html>
