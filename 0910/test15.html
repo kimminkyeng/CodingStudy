@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>콤보상자</title>
+	<script>
+		function myFunc1() {
+			alert("환영합니다.");
+		}
+		function myFunc2() {
+			alert("안녕히가세요.:)");
+		}
+	</script>
+</head>
+<!-- <body onload=myform.name.focus();> -->
+<body onload="myFunc1()" onunload="myFunc2()">
+<form name="myform">
+	<h2>on이벤트</h2>
+	<p>
+		<a href="test14.html">이동하기</a>
+		<input type="button" value="이동" onclick="location.href='test12.html'"/>
+	</p>
+	<p><input type="button" value="확인" onclick="myFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

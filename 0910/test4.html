@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc() {	
+			var cname = document.myform.cname.value;
+			var cage = document.myform.cage.value;
+			if(cname == "") {
+				alert("성명을 입력하세요...");
+				document.myform.cname.focus();
+			}
+			else if(cage == "") {
+				alert("나이를 입력하세요...")
+				document.myform.cage.focus();
+			}
+			else if(isNaN(cage)){
+				alert("나이는 숫자만 입력 가능합니다.");
+				document.myform.cage.focus();
+			}
+			else {
+				var text = "정상적으로 입력되었습니다.<br/>";
+				text += "성명 : " + cname + "<br/>나이 : " + cage;
+				// alert(text);
+				document.getElementById("demo").innerHTML = text;
+			}
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>폼체크</h2>
+	<p>성명: <input type="text" name="cname" id="cname"/></p>
+	<p>나이: <input type="text" name="cage" id="cage"/></p>
+	<p><input type="button" value="메세지" onclick="myFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

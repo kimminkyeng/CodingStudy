@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>폼체크</title>
+	<script>
+		function myFunc(sel) {
+			var today = new Date();
+			var str = "";
+			if(sel == "start") {
+				str += today.getHours() + "시";
+				str += today.getMinutes() + "분";
+				str += today.getSeconds() + "초";
+				document.getElementById("demo").innerHTML = str;
+				time_check = window.setTimeout("myFunc('start')", 1000);
+			}
+			else {
+				window.clearTimeout(time_check);
+			}
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>인터넷 시계</h2>
+	<p><input type="button" value="시계동작" onclick="myFunc('start')"/></p>
+	<p><input type="button" value="시계중지" onclick="myFunc('stop')"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

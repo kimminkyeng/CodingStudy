@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc() {	
+			var cname = document.getElementById("cname").value;
+			if(cname != "") {
+				alert("당신의 성명은? " + cname);
+			}
+			else{
+				alert("성명을 입력하세요...");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>폼체크</h2>
+	<p>성명: <input type="text" name="name" id="cname"/></p>
+	<p><input type="button" value="메세지" onclick="myFunc()"/></p>
+</body>
+</html>

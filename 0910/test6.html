@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc() {	
+		var season = document.myform.season.value;
+		alert("선택한 계절은 : " + season);
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>폼체크</h2>
+	<p>
+		<input type="radio" name="season" value="봄"/>봄
+		<input type="radio" name="season" value="여름"/>여름
+		<input type="radio" name="season" value="가을"/>가을
+		<input type="radio" name="season" value="겨울"/>겨울
+	</p>
+	<p><input type="button" value="확인" onclick="myFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

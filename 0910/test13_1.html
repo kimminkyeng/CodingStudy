@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>콤보상자</title>
+	<script>
+		function myform() {
+			alert("상호는 : " + myform.title.value);
+		}
+		function myFocus() {
+			alert("작성자는 : " + myFocus.title.value);
+		}
+	</script>
+</head>
+<!-- <body onload=myform.name.focus();> -->
+<body>
+<form name="myform">
+	<h2>onBlur이벤트</h2>
+	<p>
+		상호 : <input type="text" name="title" value="드림동산" onblur="myFunc()" />
+	</p>
+	<p>
+		작성자 : <input type="text" name="name" placeholder="이름을 입력하세요" onfocus="myFocus()"/>
+	</p>
+	<p><input type="button" value="확인" onclick="myFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

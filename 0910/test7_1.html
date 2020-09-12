@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc(sel) {
+		var season = document.myform.season.value;
+		if(sel.checked) {
+		  alert("선택한 계절은 : " + sel.value);
+		}
+		else {
+			alert("해제 하셨군요!");
+		 }
+		}
+		function viewFunc() {
+			var len = document.myform.season.length;
+			var str = "";
+			for(var i=0; i<len; i++) {
+				if(myform.season[i].checked){
+				str += myform.season[i].value + "/";
+				}
+			}
+			//document.getElementById("demo").innerHTML = str;
+			alert(str);
+			location.reload();
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>좋아하는 계절을 선택하세요.</h2>
+	<p>
+		<input type="checkbox" name="season" value="봄" onclick="myFunc(this)"/>봄
+		<input type="checkbox" name="season" value="여름" onclick="myFunc(this)"/>여름
+		<input type="checkbox" name="season" value="가을" onclick="myFunc(this)"/>가을
+		<input type="checkbox" name="season" value="겨울" onclick="myFunc(this)"/>겨울
+	</p>
+	<p><input type="button" value="확인" onclick="viewFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>

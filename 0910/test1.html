@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>confirm명령사용법</title>
+	<script>
+		function myFunc() {
+			var ans = confirm("작업을 계속할까요?");
+			if(ans) {
+			alert("작업을 계속 진행합니다.");
+			}
+			else{
+			alert("작업 중지!");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h2>메세지 활용</h2>
+	<p><input type="button" value="메세지" onclick="myFunc()"/></p>
+</body>
+</html>

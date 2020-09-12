@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc() {
+			while(true) {
+			var ans = prompt("성명을 입력하세요");
+				if(ans != "" && ans !== null) {
+				 alert("당신의 이름은 " + ans + "입니다.");
+				 break;
+				}
+				else{
+				 alert("성명을 입력하세요.");
+				}
+		    }
+		}
+	</script>
+</head>
+<body>
+	<h2>메세지 활용</h2>
+	<p><input type="button" value="메세지" onclick="myFunc()"/></p>
+</body>
+</html>

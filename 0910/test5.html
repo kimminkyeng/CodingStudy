@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prompt명령사용법</title>
+	<script>
+		function myFunc() {	
+			var mid = document.myform.mid.value;
+			var pwd = document.myform.pwd.value;
+			var repwd = document.myform.repwd.value;
+			var jumin1 = document.myform.jumin1.value;
+			var jumin2 = document.myform.jumin2.value;
+			var email = document.myform.email.value;
+
+			if(mid == "") {
+				alert("아이디를 입력하세요...");
+				document.myform.mid.focus();
+			}
+			else if(pwd == "" || repwd == "") {
+				alert("비밀번호를 입력하세요...")
+				document.myform.pwd.focus();
+			}
+			else if(pwd != repwd){
+				alert("동일한 비밀번호가 아닙니다. 확인하세요.");
+				document.myform.pwd.focus();
+			}
+			else if((jumin1.length+jumin2.length) != 7) {
+				alert("주민번호를 확인하세요!");
+				document.myform.jumin1.focus();
+			}
+			 else if(isNaN(jumin1) || isNaN(jumin2)) {
+			 	alert("숫자만 입력하세요!")
+			 	document.myform.jumin1.focus();
+			 }
+			else if(email.indexOf("@")==-1 || email.indexOf(".")==-1 ||email.indexOf("@.")!=-1 ||email.indexOf(".@")!=-1) {
+				alert("이메일을 확인하세요!");
+				document.myform.email.focus();
+			}
+			else {
+				var text = "정상적으로 입력되었습니다.<br/>";
+				text += "아이디 : " + mid + "<br/>비밀번호 : " + pwd;
+				// alert(text);
+				document.getElementById("demo").innerHTML = text;
+			}
+		}
+		function pass1() {
+			var jumin1 = document.myform.jumin1.value;
+			if(jumin1.length==6) {
+			 if(!isNaN(jumin1)){
+			myform.jumin2.focus();
+			}
+			else {
+				alert("주민번호는 숫자를 입력하세요!")
+				jumin1.focus();
+			 }
+			}
+		}
+		function pass2() {
+			if(document.myform.jumin2.value.length == 1 && 
+			   			!isNaN(document.myform.jumin2.value.length)) {
+			myform.email.focus();
+			}
+			else{
+				alert("주민번호 2번째는 1자리의 숫자만 입력하세요!")
+				myform.jumin2.value="";
+				myform.jumin2.focus();
+			}
+		}
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>폼체크</h2>
+	<p>아이디: <input type="text" name="mid" id="mid"/></p>
+	<p>비밀번호: <input type="password" name="pwd" id="pwd"/></p>
+	<p>비밀번호확인: <input type="password" name="repwd" id="repwd"/></p>
+	<p>주민번호: 
+		<input type="text" name="jumin1" onkeyup="pass1()"/>-
+		<!-- <input type="password" name="jumin2"/>  -->
+		<input type="password" name="jumin2" maxlength="1" onkeyup="pass2()"/> 
+	</p>
+	<p>이메일 : <input type="text" name="email"/></p>
+	<p><input type="button" value="확인" onclick="myFunc()"/></p>
+	<p id="demo"></p>
+</form>
+</body>
+</html>
