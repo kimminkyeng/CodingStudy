@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지 만들기 연습</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow:hidden;
+            background-color: plum;
+            top: 0;
+            position: sticky; /*스크롤로 움직일때 메뉴판 라인이 고정되며 따라다닌다.*/
+        }
+        ul li {
+            float: left;
+            text-align: center;
+        }
+        ul li a {
+            background-color: plum;
+            display: block;
+            width : 100px;
+            height: 30px;
+            padding: 8px;
+            text-decoration: none;
+            border-right:1px solid plum;
+        }
+        ul li a:hover {
+            background-color: purple;
+        }
+        .imgPosition {
+            text-align: center;
+        }
+        .active {
+            background-color: lavender;
+        }
+    </style>
+</head>
+<body>
+    <h2>Home</h2>
+    <p>회사 로고</p>
+    <ul id="topmenu">
+        <li><a href="login.html">로그인</a></li>
+        <li><a href="menu.html">메뉴</a></li>
+        <li><a href="../0904/test1.html">게시판</a></li>
+        <li><a href="data.html">자료실</a></li>
+        <li style="float:right"><a href="home2.html" class="active">홈으로</a></li>
+        <li style="float:right"><a href="#">도움말</a></li>
+    </ul>
+    <div class="imgPosition">
+        <img src="../0903/images/펭수5.jpg"/>
+    </div>
+</body>
+</html>

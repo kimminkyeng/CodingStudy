@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        text-align: center;
+        }
+        .name {
+            font-size : 10px;
+        }
+        .age {
+            font-size : 2px;
+        }
+    </style>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form name="name" method="GET/POST" action="주소">
+    <p>아이디: <input type="text" name="mid"/></p>
+    <p>비밀번호: <input type="text" name="password"/></p>
+    <p class="name">이름: <input type="text" name="mname"/></p>
+    <p class="age">나이: <input type="text" name="age" maxlength="3" value="20"/></p>
+    <p class="gender">
+        성별: <input type="radio" name="gender" value="남"/>남자
+              <input type="radio" name="gender" value="여" checked/>여자
+    </p>
+    <p>
+        취미: <input type="checkbox" name="hobby" />등산
+            <input type="checkbox" name="hobby" />낚시
+            <input type="checkbox" name="hobby" checked/>독서
+            <input type="checkbox" name="hobby" />영화감상
+            <input type="checkbox" name="hobby" />자전거타기
+    </p>
+    <p>
+        지역: <select name="address">
+                <option value="서울">서울</option>
+                <option value="서울">경기</option>
+                <option value="서울">인천</option>
+                <option value="서울">대전</option>
+                <option value="서울">충북</option>
+                <option value="서울">충남</option>
+                <option value="서울">광주</option>
+                <option value="서울">전북</option>
+                <option value="서울">전남</option>
+                <option value="서울">경북</option>
+                <option value="서울">대구</option>
+                <option value="서울">경남</option>
+                <option value="서울">부산</option>
+                <option value="서울">울산</option>
+                <option value="서울">강원</option>
+                <option value="서울">제주</option>
+            </select>
+        <button><a href="http://www.juso.go.kr ">우편번호찾기</a></button>
+    </p>
+    <p>책
+        <select name="mbook" size="5" multiple>
+            <option value="심판">심판</option>
+            <option value="개미">개미</option>
+            <option value="돈의속성">돈의속성</option>
+            <option value="덕혜옹주">덕혜옹주</option>
+            <option value="주식투자">주식투자</option>
+            <option value="홍길동">홍길동</option>
+            <option value="허삼관매혈기">허삼관매혈기</option>
+            <option value="청춘">청춘</option>
+        </select>
+    </p>
+    <p>
+        첨부파일: <input type="file" name="fname"/>
+    </p>
+    <p>
+        자기소개: <textarea name="content"cols="30" rows="5"></textarea>
+    </p>
+    <p>
+        <button><a href="complete.html">회원가입완료</a></button>
+        <button><a href="home2.html">취소</a></button>
+    </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+<head>
+<style>
+  body {
+    margin-top:0px;
+    margin-left:0px;
+  }
+  #topMenu {
+    width:850px;
+    height:30px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  #topMenu ul {
+    margin:0px;
+    padding:0px;
+    list-style:none;
+  }
+  
+  #topMenu ul li {
+    position:relative; /*상대적인 길이. 앞에 시작한 게시판을 기준으로 시작. relative 했으면 밑에 absolute 설정 해야함.*/
+    float:left;
+    background:#2d2d2d;
+    color:#fff;
+    text-align:center;
+    line-height:30px;
+  }
+  .menuLink, .submenuLink {
+    text-decoration:none;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    font-family:Trebuchet MS, Dotum;
+    width:150px;
+    display:block;
+  }
+  .menuLink:hover, .submenuLink:hover {
+    color:red;
+    background:#4d4d4d;
+  }
+  /* 하위메뉴 스타일 설정 */
+  .submenuLink {
+    color:#2d2d2d;
+    background:white;
+    border:1px solid #000;
+    margin-top:-1px;
+  }
+  .submenu {
+    position:absolute;
+    height:0px;
+    overflow:hidden;
+    transition:height .3s
+  }
+  .submenu li {
+    display:block;
+  }
+  
+  .topMenuLi:hover .submenu {
+    height:93px;
+  }
+  .longLink {
+    width:220px;
+  }
+</style>
+</head>
+<body>
+<nav id="topMenu">
+  <ul>
+    <li class="topMenuLi">
+      <a href="#" class="menuLink">애완견종류</a>
+      <ul class="submenu">
+        <li><a href="#" class="submenuLink longLink">활달한강아지</a></li>
+        <li><a href="#" class="submenuLink longLink">온순한강아지</a></li>
+        <li><a href="#" class="submenuLink longLink">사나운강아지</a></li>
+      </ul>
+    </li>
+    <li>|</li>
+    <li class="topMenuLi">
+      <a href="#" class="menuLink">로그인</a>
+    </li>
+    <li>|</li>
+    <li class="topMenuLi">
+      <a href="#" class="menuLink">자료실▼</a>
+      <ul class="submenu">
+        <li><a href="#" class="submenuLink">말티즈</a></li>
+        <li><a href="#" class="submenuLink">요크셔테리어</a></li>
+        <li><a href="#" class="submenuLink">포메라니언</a></li>
+      </ul>
+    </li>
+    <li>|</li>
+    <li class="topMenuLi">
+      <a href="#" class="menuLink">Q & A</a>
+    </li>
+    <li>|</li>
+    <li class="topMenuLi">
+      <a href="#" class="menuLink">My Page</a>
+    </li>
+  </ul>
+</nav>
+</body>
+</html>
