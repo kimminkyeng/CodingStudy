@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>디스플레이속성</title>
+	<style>
+		span.a1{ /*span에 있는 a1 클래스 이다.*/
+			width : 100px;
+			height : 100px;
+			padding : 5px;
+			border : 1px solid #00ff00;
+			background-color: lightsalmon;
+		}
+		span.a2{
+			display: inline-block; /*내가 차지하는 영역을 만드는 것*/
+			width : 100px;
+			height : 100px;
+			padding : 5px;
+			border : 1px solid #00ff00;
+			background-color: lightsalmon;
+		}
+		span.a3{
+			display: block; /*한 문단을 차지해버림*/
+			width : 100px;
+			height : 100px;
+			padding : 5px;
+			border : 1px solid #00ff00;
+			background-color: lightsalmon;
+		}
+	</style>
+</head>
+<body>
+	<h2>Display 속성</h2>
+	<h3>inline 속성</h3>
+	<div>
+		동해물과 <span class="a1">백두산이</span> 마르고 닳도록
+		하느님이 보우하사 우리나라 만세
+		무궁화 삼천리 화려강산
+		대한사람 대한으로 길이 보전하세
+	</div>
+	<div>
+		동해물과 <span class="a2">백두산이</span> 마르고 닳도록
+		하느님이 보우하사 우리나라 만세
+		무궁화 삼천리 화려강산
+		대한사람 대한으로 길이 보전하세
+	</div>
+	<div>
+		동해물과 <span class="a3">백두산이</span> 마르고 닳도록
+		하느님이 보우하사 우리나라 만세
+		무궁화 삼천리 화려강산
+		대한사람 대한으로 길이 보전하세
+	</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>폼테그에 css적용하기</title>
+	<style>
+		#content1, #content2 {
+			width: 350px;
+			float: left;
+		}
+		#content3{
+			width: 350px;
+			clear: both;
+			float: left;
+		}
+		#content4 {
+			width: 350px;
+			float: left;
+		}
+		#content5 {
+			clear: both;
+		}
+		.tit1 {
+			width : 80px;
+			float: left;
+			/*line-height: 100px; ul 태그의 속성을 건드려버림*/
+		}
+		ul {
+			list-style-type: none;
+		}
+		fieldset {
+			margin: 20px 10px;
+			padding: 10px;
+		}
+		fieldset legend {
+			font-weight: bold;
+			font-size: 18px;
+			color : purple;
+		}
+	</style>
+</head>
+<body>
+<div id="content">
+	<form>
+		<div id="content1">
+		<fieldset>
+			<legend>배송지 정보1</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<div id="content2">
+		<fieldset>
+			<legend>배송지 정보2</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<div id="content3">
+		<fieldset>
+			<legend>배송지 정보3</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<div id="content4">
+		<fieldset>
+			<legend>배송지 정보4</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<div id="content5">
+		<fieldset>
+			<legend>배송지 정보5</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	<div id="content6">
+		<fieldset>
+			<legend>배송지 정보6</legend>
+			<ul>
+				<li>
+					<label class="tit1" for="name">이름</label>
+					<input type="text" name="name" id="name">
+				</li>
+				<li>
+					<label class="tit1" for="age">나이</label>
+					<input type="text" name="age" id="age">
+				</li>
+				<li>
+					<label class="tit1" for="tel">전화번호</label>
+					<input type="text" name="tel" id="tel">
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	</form>
+</div>
+</body>
+</html>

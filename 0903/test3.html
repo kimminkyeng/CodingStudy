@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>수직정렬</title>
+	<style>
+		#content {
+			/*width: 300px;
+			height: 300px;
+			border: 1px solid gray;*/
+			position: absolute; /*포지션을 '절대위치'로 지정*/
+			left: 50%;
+			top: 50%; /*절대위치를 왼쪽에서 50%, 위에서 50%. 즉, 브라우저의 정 가운데임*/
+			text-align: center;}
+		#content2 {
+			width: 300px;
+			/*height: 300px;*/
+			border : 1px solid gray;
+			position: absolute;
+			left: -150px; /*width(폭)을 지정한것의 -150px (50%)만큼 왼쪽으로 가면 브라우저의 정 가운데 위치*/
+		}	
+	</style>
+</head>
+<body>
+<div id="content">
+	<div id="content2">
+		문서내용
+	</div>	
+</div>
+</body>
+</html>

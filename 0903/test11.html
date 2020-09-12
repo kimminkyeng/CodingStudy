@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입하자</title>
+	<style>
+		.boxform {
+			background-color: #dddddd;
+			border-radius: 5px;
+			padding: 20px;
+		}
+		input[type=text], input[type=number], input[type=submit], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			border: 1px solid #ccc;
+			display: inline-block;
+		}
+		* { 
+			box-sizing: border-box;
+		}
+		input[type=text]:hover, input[type=number]:hover, select:hover {
+			background-color: magenta;
+		}
+	</style>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<div class ="boxform">
+		<form>
+			<label for="fname">성명</label>
+			<input type="text" name="fname" id="fname" placeholder="성명 입력하세요"/>
+			<label for="age">나이</label>
+			<input type="number" name="age" id="age" value="20"/>
+			<label for="job" name="job">직업</label>
+			<select name="job" id="job">
+				<option>직업선택</option>
+				<option>학생</option>
+				<option>회사원</option>
+				<option>공무원</option>
+				<option>군인</option>
+				<option>기사</option>
+			</select>
+			<input type="submit" value="회원가입"/>
+		</form>
+	</div>
+</body>
+</html>

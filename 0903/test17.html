@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메뉴만들기</title>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding:0;
+		}
+		li {
+			text-align: center;
+		}
+		li a {
+			display: block;
+			width: 80px;
+			background-color: seagreen;
+			padding: 8px 16px;
+			text-decoration: none;
+			/* border:1px solid gray; */
+			border-style: solid;
+			border-color: gray;
+			border-bottom: 1px;
+			border-width: 0 1px 1px;
+		}
+		/* li a :first-child {
+			border-top-width: 1px;
+		} */
+		li a:active {
+			background-color: greenyellow;
+			color : white;
+		}
+		li a:hover:not(:active) {
+			background-color: yellow;
+			color : brown;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#">홈으로</a></li>
+		<li><a href="#">게시판</a></li>
+		<li><a href="#">방명록</a></li>
+		<li><a href="#">자료실</a></li>
+	</ul>
+	<p>길동이네 집을 방문해 주셔서 감사합니다.</p>
+</body>
+</html>

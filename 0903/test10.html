@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>폼테그연습</title>
+	<style>
+		input {
+			width: 100%;
+			padding : 15px 10px;
+			margin: 8px 0;
+			/*border :1px solid #ff0000;*/
+			border : none;
+			border-bottom:2px solid #ff0000;
+			border-radius: 8px;
+			background-color : lightblue;
+		}
+		input[type=password] {
+			width: 100%;
+			padding : 15px 10px;
+			margin: 8px 0;
+			/*border :1px solid #ff0000;*/
+			border : none;
+			border-bottom:2px solid #0000ff;
+			border-radius: 8px;
+			background-color : magenta ;
+		}
+		textarea {
+			width: 100%;
+			padding : 15px 10px;
+			margin: 8px 0;
+			/*border :1px solid #ff0000;*/
+			border : none;
+			border-bottom:2px solid #ff0000;
+			border-radius: 8px;
+			background-color : lightgreen;
+		}
+		select {
+			width : 100%;
+			padding : 10px;
+			background-color: lightyellow;
+			border-radius: 8px;
+		}
+		input[type=submit],input[type=reset] ,input[type=button] {
+			width: 100%;
+			padding : 15px, 10px;
+			margin : 8px,0;
+			border : 1px solid gray;
+			background-color: honeydew;
+		}
+	</style>
+</head>
+<body>
+	<form name="myform" method="post" action="파일명">
+		<div>
+			<label for="name">성명</label>
+			<input type="text" name="name" id="name" placeholder="성명을 입력하세요" autofocus/>
+		</div>
+		<div>
+			<label for="pwd">비밀번호</label>
+			<input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요"/>
+		</div>
+		<select name="hobby" id="hobby">
+			<option value="등산">등산</option>
+			<option value="낚시">낚시</option>
+			<option value="독서">독서</option>
+			<option value="영화감상">영화감상</option>
+			<option value="사이클">사이클</option>
+			<option value="여행">여행</option>
+		</select>
+		<div>
+			<label for="content">자기소개</label>
+			<textarea rows="5" name="content" id="content" placeholder="자기소개를 입력하세요"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="회원가입" />
+			<input type="reset" value="취소하기" />
+			<input type="button" value="가입하기" />
+		</div>
+	</form>
+</body>
+</html>
