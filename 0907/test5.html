@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test5.html(미디어쿼리연습3)</title>
+	<style>
+		* {
+			margin : 0px;
+			padding : 0;
+		}
+		body {
+			background-color: honeydew;
+		}
+		#wrap { /*전체크기를 퍼센트로 변경할때, 고정 기본크기는 px로 지정해야한다.*/
+			width: 1200px;
+			margin : 0 auto; /*가운데로감.(글과 이미지는 text-align:center;)*/
+		}
+		header {
+			width: 100%;
+			height: 100px;
+			background-color: blueviolet;
+		}
+		nav {
+			width: 100%;
+			height: 30px;
+			background-color: pink;
+		}
+		aside {
+			float:left;
+			width: 20%;
+			height: 600px;
+			background-color: plum;
+		}
+		section {
+			float:left;
+			width: 80%;
+			height: 600px;
+			background-color: purple;
+		}
+		footer {
+			clear: both;  /*side와 contents가 'float:left;' 했기 때문에. */;
+			width: 100%;
+			height: 100px;
+			background-color: papayawhip;
+		}
+		@media(max-width: 1220px) { /*스크롤바 크기 생각해서 20px 더 준다.(처음 띄울때 스크롤바가 안나오게)*/
+			#wrap {
+				width: 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header></header>
+		<nav></nav>
+		<aside></aside>
+		<section></section>
+		<footer></footer>
+	</div>
+</body>
+</html>

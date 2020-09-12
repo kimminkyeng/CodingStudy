@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test3.html(미디어쿼리)</title>
+	<style>
+		div {
+			border : 5px solid green;
+			font-size: 60px;
+			color : white;
+			background-color: darkmagenta;
+		}
+		/* screen width > 800px
+		@media(min-width:800px) { /*최소 화면크기를 800px으로 정한다*/
+		/*screen width < 800px*/
+		@media(max-width:800px) {/*최대 화면크기를 800px으로 정한다 800픽셀에서 점점 작아짐*/
+			div {
+			/*display: none;*/
+			border : 2px solid green;
+			font-size: 20px;
+			color : white;
+			background-color: darkmagenta;
+			}
+		}
+		@media(max-width:400px) {/*최대 화면크기를 400px으로 정한다 400픽셀에서 점점 작아짐*/
+			div {
+			/*display: none;*/
+			border : 1px solid green;
+			font-size: 10px;
+			/*color : white;
+			background-color: darkmagenta;*/
+			}
+		}	
+	</style>
+</head>
+<body>
+	<div>
+		안녕하세요 반갑습니다
+	</div>
+</body>
+</html>

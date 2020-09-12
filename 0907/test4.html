@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test4.html(미디어쿼리연습2)</title>
+	<style>
+		body {
+			background-color: greenyellow;
+			color : black;
+		}
+		h2::before { /*'::'는 가상태그. 'h2::before' 는 h2 나오기전에 수행하라. */
+			content: '1.'
+		}
+		h2::after { /*'::'는 가상태그. 'h2::after' 는 h2 나온후에 수행하라. */
+			content: ' - 기본'
+		}
+		/*데스크탑 화면 디자인*/
+		@media(max-width: 1280px) {
+			body {
+			background-color: green;
+			color : black;
+			}
+		h2::before { /*'::'는 가상태그. 'h2::before' 는 h2 나오기전에 수행하라. */
+			content: '1.'
+		}
+		h2::after { /*'::'는 가상태그. 'h2::after' 는 h2 나온후에 수행하라. */
+			content: ' - 데스크탑'
+			}
+		}
+		/*노트북 화면 디자인*/
+		@media(max-width: 1024px) {
+			body {
+			background-color: rgb(6, 54, 6);
+			color : black;
+			}
+		h2::before { /*'::'는 가상태그. 'h2::before' 는 h2 나오기전에 수행하라. */
+			content: '2.'
+		}
+		h2::after { /*'::'는 가상태그. 'h2::after' 는 h2 나온후에 수행하라. */
+			content: ' - 노트북'
+			}
+		}
+		/*태블릿 화면 디자인*/
+		@media(max-width: 960px) {
+			body {
+			background-color: rgb(9, 209, 9);
+			color : black;
+		 	}
+		h2::before { /*'::'는 가상태그. 'h2::before' 는 h2 나오기전에 수행하라. */
+			content: '3.'
+		}
+		h2::after { /*'::'는 가상태그. 'h2::after' 는 h2 나온후에 수행하라. */
+			content: ' - 태블릿'
+			}
+		}
+		/*모바일 화면 디자인*/
+		@media(max-width: 576px) {
+			body {
+			background-color: rgb(6, 253, 6);
+			color : black;
+			}
+		h2::before { /*'::'는 가상태그. 'h2::before' 는 h2 나오기전에 수행하라. */
+			content: '4.'
+		}
+		h2::after { /*'::'는 가상태그. 'h2::after' 는 h2 나온후에 수행하라. */
+			content: ' - 모바일'
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>미디어 쿼리</h2>
+	<div>
+		<h3>데스크탑</h3>
+		<p>화면의 너비가 0 ~ 1280px</p>
+	</div>
+	<div><br/></div>
+	<div>
+		<h3>노트북</h3>
+		<p>화면의 너비가 0 ~ 1024px</p>
+	</div>
+	<div><br/></div>
+	<div>
+		<h3>테블릿</h3>
+		<p>화면의 너비가 0 ~ 960px</p>
+	</div>
+	<div><br/></div>
+	<div>
+		<h3>모바일</h3>
+		<p>화면의 너비가 0 ~ 576px</p>
+	</div>
+	<div><br/></div>
+</body>
+</html>
