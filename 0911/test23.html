@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>정규식</title>
+		<!-- 
+			 - 정규식은 '/ /'로 둘러싼다.
+			 - 정규식의 테스트는 '정규식.test(테스트)'로 실행한다.
+			 - 동일한 문자를 검색하고자 한다면 '/문자 또는 문자열/' 추가, 있으면 true, 없으면 false를 반환한다.
+		-->
+	<script>
+		function myFunc() {
+			var txt = "";
+			// var check = /^\d{3}$/g; // 연속으로 숫자가 3개만 있으면 true, 아니면 false. : '+'또는 '*'은 반복을 의미. 'g'는 전체를 의미. '.'은 한개의 문자를 의미.
+			var check = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g; // 이메일형식이 맞으면 true, 아니면 false. '[\.-]'는 '.' 하나만 들어가야함.
+			var content = document.getElementById("content").value;
+			if(content == "") {
+				txt = "내용을 입력하세요.";
+				document.getElementById("content").focus();
+			}
+			else {
+				if(check.test(content)) {
+					txt = "이메일 형식이 맞습니다.";
+				}
+				else {
+					txt = "아닙니다!!";
+				}
+			}
+			document.getElementById("demo").innerHTML = txt;
+		}
+		function myReset() {
+			document.getElementById("demo").innerHTML = "";
+		} 
+	</script>
+</head>
+<body>
+<form name="myform">
+	<h2>정규식 연습</h2>
+<p>
+	<input type="text" name="content" id="content"/>
+	<input type="button" value="체크" onclick="myFunc()"/>
+	<input type="reset" value="취소" onclick="myReset()"/>
+</p>
+<p id="demo"></p>
+</form>
+</body>
+</html>

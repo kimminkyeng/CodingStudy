@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>정규식</title>
+	<script>
+		function myFunc() {
+			var txt = "";
+
+			document.getElementById("demo").innerHTML = txt;
+		}
+		function myReset() {
+			document.getElementById("demo").innerHTML = "";
+		} 
+
+	</script>
+</head>
+<body>
+<form name="myform">
+<p>
+	<input type="text" name="content" id="content"/>
+	<input type="button" value="체크" onclick="myFunc()"/>
+	<input type="reset" value="취소" onclick="myReset()"/>
+</p>
+<p id="demo"></p>
+</form>
+</body>
+</html>
