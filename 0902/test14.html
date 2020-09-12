@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>후손선택자/자손선택자</title>
+	<style>
+		li {
+			list-style: none;
+			float: left; /*밑에 li 리스트들이 따닥따닥 연이어서 붙어서 나옴.*/
+			padding: 20px; /*밑에 li 리스트들이 가로로 이어서 나오나 간격이 20px.*/
+			background-color: greenyellow;
+		}
+		li:first-child {
+			border-radius: 15px 0 0 15px;
+		}
+		li:last-child {
+			border-radius: 0 15px 15px 0;
+		}
+		li:nth-child(2n+1)/*2n은 짝수. 2n+1은 홀수.*/ {
+			background-color: khaki;
+		}
+	</style>
+</head>
+<body>
+	<h2>길동이가 좋아하는 음식 best 5</h2>
+	<ul>
+		<li>자장면</li>
+		<li>과자</li>
+		<li>과일</li>
+		<li>딸기</li>
+		<li>사과</li>
+		<li>바나나</li>	
+		<li>우유</li>	
+		<li>떡볶이</li>
+		<li>쵸코렛</li>
+	</ul>
+</body>
+</html>

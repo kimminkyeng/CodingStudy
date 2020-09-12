@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>테이블 스타일연습</title>
+	<style>
+		table, th, td {
+		/*table{*/	
+			border : 1px solid gray;
+			padding : 10px; /*표안의 여백 크기*/
+			border-collapse: collapse; /*표안의 여백을 제로(0)로*/
+
+		}
+		th{
+			background-color: gray;
+		}
+		tr:nth-child(2n){
+			background-color: lemonchiffon;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>제목1</th>
+			<th>제목2</th>
+			<th>제목3</th>
+		</tr>
+		<tr>
+			<td>내용1-1</td>
+			<td>내용1-2</td>
+			<td>내용1-3</td>
+		</tr>
+		<tr>
+			<td>내용2-1</td>
+			<td>내용2-2</td>
+			<td>내용2-3</td>
+		</tr>
+		<tr>
+			<td>내용3-1</td>
+			<td>내용3-2</td>
+			<td>내용3-3</td>
+		</tr>
+	</table>
+</body>
+</html>

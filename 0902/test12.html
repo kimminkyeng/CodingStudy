@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>후손선택자/자손선택자</title>
+	<style>
+		ol li ul li { /*ol li ul li -> ol 밑에 li 밑에 ul 밑에 li 연결. (=ol>li>ul>li)*/
+			color : blue;
+		}
+		.aa{
+			color: red;
+		}
+		ol {
+			/*list-style-type: lower-alpha; 리스트 번호가 소문자로 나옴*/
+			/*list-style-type: upper-alpha; 리스트 번호가 대문자로 나옴*/
+			list-style-type: upper-roman; /*리스트 번호가 로마자대문자로 나옴*/
+		}
+		ul {
+			/* list-style-type: square; ul 리스트 번호가 사각형으로 나옴*/
+			/* list-style-type: disc; ul 리스트 번호가 꽉찬 검은 동그라미로 나옴*/
+			list-style-type: circle;
+		}
+		ul > li.apple {
+			list-style-type: none;
+		}
+	</style>
+</head>
+<body>
+	<h2>길동이가 좋아하는 음식 best 5</h2>
+	<ol>
+		<li>자장면</li>
+		<li class="aa">과자</li>
+		<li>과일
+			<ul>
+				<li>딸기</li>
+				<li class="apple">사과</li>
+				<li>바나나</li>
+			</ul>
+		</li>	
+		<li class="aa">떡볶이</li>
+		<li>쵸코렛</li>
+	</ol>
+</body>
+</html>

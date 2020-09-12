@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test7.html</title>
+	<style>
+		input:enabled {background-color: turquoise; color : blue}/*활성화 색상*/
+		input:disabled {background-color: violet} /*비활성화 색상*/
+	</style>
+</head>
+<body>
+	<h2>양식태그 활성화 장식</h2>
+	<form>
+		<p>성명 <input type="text" name="name" disabled="disabled"/></p>
+		<p>
+			성별 <input type="radio" name="gender" value="남자" disabled="disabled">남자
+			     <input type="radio" name="gender" value="여자">여자
+		</p>
+	</form>
+</body>
+</html>

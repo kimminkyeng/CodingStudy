@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*선택자[속성^=값] : 속성안의 값중 특정단어로 시작하는것에 대한 적용
+		선택자[속성$=값] : 속성안의 값중 특정단어로 끝나는것에 대한 적용
+		선택자[속성|=값] : 속성안의 값중 특정단어가 포함되는 문장에 대한 적용
+		선택자[속성~=값] : 속성안의 값중 특정단어가 포함되는 문장에 대한 적용
+		선택자[속성*=값] : 속성안의 값중 특정단어로(값을) 포함하는것에 대한 적용
+		*/
+		img[src$=png] {border:3px solid red} /*<- ';'를 주지 않는 이유는, 저것 자체가 명령이기 때문에.*/
+	</style>
+</head>
+<body>
+	<h2>그림 연습</h2>
+	<p><img src="D:\java2006\html_css_js\works\css\0902\images\11.jpg" width="200px"></p>
+	<p><img src="D:\java2006\html_css_js\works\css\0902\images\펭수6.jpg" width="200px"></p>
+</body>
+</html>
