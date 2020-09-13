@@ -1,2 +1,2 @@
 # CodingStudy
-JAVA, HTML5, CSS, Javascript, mySQL, Spring web project
+JAVA, HTML5, CSS, Javascript, mySQL, Spring Framework
